@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ChatList.css";
 
+const chatroom_id = 1;
+const socket = new WebSocket(`ws://localhost:8000/ws/chatroom/${chatroom_id}/`);
+socket.onmessage = function (event) {
+  const message = JSON.parse(event.data);
+  // handle message here
+};
+// send message using socket.send() method
+
 function ChatList() {
   const [data, setData] = useState([]);
 

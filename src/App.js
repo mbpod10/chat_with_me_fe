@@ -1,8 +1,10 @@
 import ChatList from "./components/ChatList";
+import ChatChannel from "./components/ChatChannel";
 
 function App() {
   return (
-    <ChatList />
+    // <ChatList />
+    <ChatChannel />
   );
 }
 
